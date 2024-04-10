@@ -4,6 +4,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from utils import load_data
 from home import run_home
+from eda import run_eda_home
 
 def main():
   # csv파일 데이터 받아오기
@@ -16,7 +17,7 @@ def main():
   if selected == '홈':
     run_home(total_df)
   elif selected == '탐색적 자료분석':
-    pass
+    run_eda_home(total_df)
   elif selected == '부동산 예측':
     pass
   else:
